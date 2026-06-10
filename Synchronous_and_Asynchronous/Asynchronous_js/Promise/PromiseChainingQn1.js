@@ -33,4 +33,5 @@ FetchUserData()
     console.log(result);
     console.log("execution completed");
 })
-.catch(()=>console.log("Error occurs...."));
+.catch(()=>console.log("Error occurs...."))
+.finally(()=>console.log("Done"));
