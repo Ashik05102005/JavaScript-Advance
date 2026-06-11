@@ -18,7 +18,7 @@ class Student{
 let student1=new Student("ashik",21);
 let student2=new Student("bob",16);
 let student3=new Student("john",21);
-console.log(student1);
-console.log(student2);
-console.log(student3);
+console.log("dob : "+student1.getDob());
+console.log("dob : "+student2.getDob());
+console.log("dob : "+student3.getDob());
 console.log(Student.youngest(student1,student2,student3));

@@ -7,7 +7,8 @@ function main(word){
             reverse(index)
         }
     }
-    reverse(letters.length-1)
+    reverse(letters.length-1);
     return rev.join("");
 }
 console.log(main("hello world..."));
+

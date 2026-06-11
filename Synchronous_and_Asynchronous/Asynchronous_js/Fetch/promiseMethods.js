@@ -17,3 +17,12 @@ Promise.race([
 //promise.any
 Promise.any([Promise.reject("fail"), Promise.resolve("success")])
   .then(result => console.log(result)); // "success"
+
+// | Method      | Resolves When                 | Rejects When |
+// | 
+// | resolve     | Immediately fulfilled         | Never |
+// | reject`     | Never                         | Immediately rejected |
+// | all``       | All succeed                   | Any fail |
+// | allSettled``| All settle                    | Never (always resolves with statuses) |
+// | ``race``    | First settles(success or fail)| Same as above |
+// | ``any``     | First success                 | All fail |
