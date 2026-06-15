@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="call()" value="click">
+    <p id="time"></p>
+    <script>
+        let counter=1
+        function getData(){
+            console.log("fetching... "+counter++);
+        }
+        function troutling(dataFunc,delay){
+            let flag=true;
+            return function(){
+                let context= this,
+                args=arguments;
+                if(flag){
+                    dataFunc.apply(context,args);
+                    flag=false
+                }
+                setTimeout(()=>{
+                    flag=true;
+                },delay)
+            }
+        }
+        let call=troutling(getData,6000);
+        let para =document.getElementById("time");
+        para.innerHTML=new Date().toLocaleTimeString()
+    </script>
+</body>
+</html>

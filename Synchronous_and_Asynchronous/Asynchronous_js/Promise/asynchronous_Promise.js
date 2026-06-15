@@ -13,5 +13,6 @@ const fetchData = (success) => {
 };
 
 fetchData(true)
-  .then(data => console.log(data))   // runs if resolved
+  .then(data => console.log(data))
+  .then()   // runs if resolved
   .catch(err => console.log(err));   // runs if rejected

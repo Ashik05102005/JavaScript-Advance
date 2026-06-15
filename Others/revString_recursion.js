@@ -1,14 +1,13 @@
-function main(word){
-    let letters=[...word],rev=[];
+function main(str){
+    let strinArray=[...str],rev=[]
     function reverse(index){
-        rev.push(letters[index])
-        if(index!==0){
+        if(index>=0){
+            rev.push(strinArray[index]);
             index--;
-            reverse(index)
+            reverse(index);
         }
     }
-    reverse(letters.length-1);
-    return rev.join("");
+    reverse(str.length-1)
+    return rev.join("")
 }
-console.log(main("hello world..."));
-
+console.log(main("hello"));
